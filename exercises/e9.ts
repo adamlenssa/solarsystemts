@@ -2,7 +2,10 @@
 // Return the data object of the planet "Earth"
 // Return example: { key1: value1, key2: value2, ... , keyN: valueN }
 
-export let findEarthData = (data) => {};
+import { MassData } from "./types";
+
+export let findEarthData = (data: MassData) =>
+  data.planets.find((planet) => planet.name == "Earth");
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-9"

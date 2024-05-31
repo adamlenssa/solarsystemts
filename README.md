@@ -29,6 +29,15 @@ export type VolData = {
 
 export type Planet = {
   // something
+  id: string;
+  name: string;
+  isPlanet: boolean;
+  mass: { massValue: number; massExponent: number };
+  vol: { volValue: number; volExponent: number };
+  gravity: number;
+  avgTemp: number;
+  moonsCount: number | null;
+  moons: string[] | null;
 };
 
 export type Asteroid = {
