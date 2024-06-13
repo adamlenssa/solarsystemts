@@ -5,11 +5,11 @@ import { MassData } from "./types";
 
 // Return example: 42
 export const allPlanetsMoonsCount = (data: MassData) => {
-  return data.planets.reduce((acc, cur) => {
-    if (!cur.moonsCount) {
-      return acc + 0;
+  return data.planets.reduce((acc, planet) => {
+    if (!planet.moonsCount) {
+      return acc;
     }
-    return acc + cur.moonsCount;
+    return acc + planet.moonsCount;
   }, 0);
 };
 

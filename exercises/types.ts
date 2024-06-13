@@ -17,8 +17,8 @@ export type Planet = {
   vol: { volValue: number; volExponent: number };
   gravity: number;
   avgTemp: number;
-  moonsCount: number | null;
-  moons: string[] | null;
+  moonsCount?: number;
+  moons?: string[];
 };
 
 export type Asteroid = {
@@ -31,3 +31,5 @@ export type Asteroid = {
 export type AllData = {
   // something
 };
+
+export type Counter = { year: number; occ: number };

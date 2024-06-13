@@ -12,12 +12,9 @@ export function findPlanetByMoon({
   moonName: string;
 }) {
   return planets.find((planet) => {
-    const boolean = planet.moons?.find(
-      (moon) => moon.toLowerCase() == moonName.toLowerCase()
-    );
-    if (boolean) {
-      return planet;
-    }
+    return planet.moons
+      ?.map((moon) => moon.toLowerCase())
+      .includes(moonName.toLowerCase());
   });
 }
 
